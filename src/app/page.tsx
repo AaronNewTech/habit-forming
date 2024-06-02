@@ -9,7 +9,7 @@ export default function Home() {
       </h2>
       <h2 className="text-2xl pt-10 font-bold">
         This form uses the smart goal topic. (add a question mark icon here that
-        has more info)
+        has more info) (test)
       </h2>
       <div className="container">
         <form className="flex flex-col items-end gap-4 pt-8">
