@@ -1,14 +1,16 @@
 import React from "react";
+import NavBar from "./navbar/page";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-8">
+        <NavBar ></NavBar>
       <h1 className="text-4xl font-bold">Habit Forming!</h1>
-      <h2 className="text-2xl pt-10 font-bold">
+      <h2 className="text-1xl pt-10 font-bold">
         This app will help you reach your goals by helping build daily habits
       </h2>
-      <h2 className="text-2xl pt-10 font-bold">
-        This form uses the smart goal topic. (add a question mark icon here that
+      <h2 className="text-1xl pt-10 font-bold">
+        This form uses the smart goal method. (add a question mark icon here that
         has more info)
       </h2>
       <div className="container">
