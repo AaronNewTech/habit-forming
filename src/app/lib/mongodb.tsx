@@ -3,12 +3,12 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const MONGODB_URL = process.env.MONGO_URL;
+const { MONGODB_URI } = process.env;
 
 
-if (!MONGODB_URL) {
-    console.log("MONGODB_URL", MONGODB_URL);
-  throw new Error("Invalid env variable: MONGODB_URL");
+if (!MONGODB_URI) {
+    console.log("MONGODB_URI", MONGODB_URI);
+  throw new Error("Invalid env variable: MONGODB_URI");
 }
 
 export const connectToMongoDB = async () => {
@@ -16,7 +16,7 @@ export const connectToMongoDB = async () => {
     return;
   }
   try {
-    const { connection } = await mongoose.connect(MONGODB_URL);
+    const { connection } = await mongoose.connect(MONGODB_URI);
     if (connection.readyState === 1) {
       return Promise.resolve(true);
     }
