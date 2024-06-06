@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     setAuthCookies(authToken);
 
     return NextResponse.json(
-      { success: true, msg: "User logged in sucessfully" },
+      { success: true, msg: "Signup sucessful" },
       { status: 200 }
     );
   } catch (error) {

@@ -22,7 +22,7 @@ export default function Home() {
             type="text"
             id="goal"
             name="goal"
-            className="w-full rounded-[5rem] bg-white p-6 h-4"
+            className="text-black w-full rounded-[5rem] bg-white p-6 h-4"
             placeholder="Enter your goal"
           />
           <label htmlFor="details" className="w-full">
@@ -32,7 +32,7 @@ export default function Home() {
             type="text"
             id="details"
             name="details"
-            className="w-full rounded-[5rem] bg-white p-6 h-4"
+            className="text-black w-full rounded-[5rem] bg-white p-6 h-4"
             placeholder="Enter goal details"
           />
           <label htmlFor="tasks1" className="w-full">
@@ -42,7 +42,7 @@ export default function Home() {
             type="text"
             id="tasks1"
             name="tasks1"
-            className="w-full rounded-[5rem] bg-white p-6 h-4"
+            className="text-black w-full rounded-[5rem] bg-white p-6 h-4"
             placeholder="Enter tasks to get goal"
           />
           <label htmlFor="tasks2" className="w-full">
@@ -52,7 +52,7 @@ export default function Home() {
             type="text"
             id="tasks2"
             name="tasks2"
-            className="w-full rounded-[5rem] bg-white p-6 h-4"
+            className="text-black w-full rounded-[5rem] bg-white p-6 h-4"
             placeholder="Enter tasks to get goal"
           />
           <label htmlFor="tasks3" className="w-full">
@@ -62,7 +62,7 @@ export default function Home() {
             type="text"
             id="tasks3"
             name="tasks3"
-            className="w-full rounded-[5rem] bg-white p-6 h-4"
+            className="text-black w-full rounded-[5rem] bg-white p-6 h-4"
             placeholder="Enter tasks to get goal"
           />
           <label htmlFor="realistic" className="w-full">
@@ -72,7 +72,7 @@ export default function Home() {
             type="text"
             id="realistic"
             name="realistic"
-            className="w-full rounded-[5rem] bg-white p-6 h-4"
+            className="text-black w-full rounded-[5rem] bg-white p-6 h-4"
             placeholder="Is this goal realistic?"
           />
           <label htmlFor="reward" className="w-full">
@@ -82,7 +82,7 @@ export default function Home() {
             type="text"
             id="reward"
             name="reward"
-            className="w-full rounded-[5rem] bg-white p-6 h-4"
+            className="text-black w-full rounded-[5rem] bg-white p-6 h-4"
             placeholder="Enter reward for getting goal"
           />
           <label htmlFor="deadline" className="w-full">
@@ -92,7 +92,7 @@ export default function Home() {
             type="text"
             id="deadline"
             name="deadline"
-            className="w-full rounded-[5rem] bg-white p-6 h-4"
+            className="text-black w-full rounded-[5rem] bg-white p-6 h-4"
             placeholder="Enter goal deadline"
           />
           <button

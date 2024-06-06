@@ -1,5 +1,8 @@
 import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
+import { IUser } from '../types/index'
+import { connectToMongoDB } from './mongodb';
+import User from '../models/user';
 
 const { JWT_SECRET } = process.env
 const isProduction = process.env.NODE_ENV === 'production';
@@ -21,4 +24,32 @@ export const setAuthCookies = (value: string): void => {
         sameSite: isProduction ? 'strict' : 'lax',
         maxAge: value ? 7*24*60*60 : 0
     })
+}
+
+export const isUserAuthorized = async () => {
+    const token = cookies().get('auth-token')?.value;
+
+    let user: IUser | null = null;
+
+    if (token) {
+        const data = jwt.verify(token, JWT_SECRET);
+
+        if (typeof data !== 'string') {
+
+            try {
+                connectToMongoDB().catch(error => { throw new Error(error) });
+
+                user = await User.findById(data._id)
+
+                return user;
+
+            } catch (error) {
+                return null;
+            }
+            
+        }
+
+        return user;
+    }
+    return user;
 }
